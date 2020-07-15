@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <nav className="nav-wrapper white">
         <div className="container">
-        <a Link to='/India' className="brand-logo"><img src={logo} alt=""/> </a>
+        <Link to='/India' className="brand-logo"><img src={logo} alt=""/> </Link>
           <a href="index.html" className="sidenav-trigger" data-target="mobile-menu">
             <i  className="black-text material-icons">menu</i>
           </a>
@@ -15,7 +15,7 @@ const Navbar = () => {
             <li><Link to='/India'  className="black-text navitem">India Status</Link></li>
             <li><Link to='/About'  className="black-text navitem"> About</Link></li>
           </ul>
-          <ul className="sidenav grey lighten-2" id="mobile-menu">
+          <ul className="sidenav white" id="mobile-menu">
           <li><Link to='/Global'  className="black-text navitem">Global Status</Link></li>
             <li><Link to='/India'  className="black-text navitem">India Status</Link></li>
             <li><Link to='/About'  className="black-text navitem"> About</Link></li>

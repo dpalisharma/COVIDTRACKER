@@ -21,24 +21,23 @@ const Global = () => {
     const handleCountryChange = async (country) => {
         const data = await fetchDataGlobal(country);
         setData(data);
-        setCountry({ country: country });
+        setCountry(country);
       }
 
     return (
+        
         <div className='container'>
-          
             <div className="row">
                 <div className="col global m3">
-                    <h6 className="grey-text bold margin center">COVID-19 Global Status</h6>
+                    <h6 className="grey-text bold margin center">COVID-19 {country} Status</h6>
                     <CardData data={data}/>   
-            </div>
+                </div>
                 
                 <div className="col m9">
-                <Picker handleCountryChange={handleCountryChange} />
-                <Chart data={data} country={country} />
+                    <Picker handleCountryChange={handleCountryChange} />
+                    <Chart data={data} country={country} />
                 </div>
             </div>
-            
         </div>
     )
 }

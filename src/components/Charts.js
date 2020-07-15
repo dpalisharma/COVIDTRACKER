@@ -4,7 +4,7 @@ import { fetchDailyDataGlobal } from '../api/index';
 
 const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
   const [dailyData, setDailyData] = useState({});
-
+  console.log(country);
   useEffect(() => {
     const fetchMyAPI = async () => {
       const initialDailyData = await fetchDailyDataGlobal();
@@ -23,7 +23,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
           datasets: [
             {
               label: 'People',
-              backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)'],
+              backgroundColor: ['rgba(126, 162, 228)', 'rgba(137, 214, 147)', 'rgba(245, 107, 107)'],
               data: [confirmed.value, recovered.value, deaths.value],
             },
           ],
@@ -44,12 +44,12 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
           datasets: [{
             data: dailyData.map((data) => data.confirmed),
             label: 'Infected',
-            borderColor: '#3333ff',
+            borderColor: 'rgba(126, 162, 228)',
             fill: true,
           }, {
             data: dailyData.map((data) => data.deaths),
             label: 'Deaths',
-            borderColor: 'red',
+            borderColor: 'rgba(245, 107, 107)',
             backgroundColor: 'rgba(255, 0, 0, 0.5)',
             fill: true,
           },

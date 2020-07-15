@@ -3,7 +3,9 @@ import React from 'react'
 const Table = ({reg,loading}) => {
   
 
- return loading ? ( <h1>loading...</h1> ):(
+ return loading ? ( <div class="progress">
+ <div class="indeterminate"></div>
+</div> ):(
    
      <table className="white border">
         <thead className="padd">
