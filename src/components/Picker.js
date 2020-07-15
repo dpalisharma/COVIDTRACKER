@@ -16,8 +16,8 @@ const Countries = ({ handleCountryChange }) => {
   return (
       <section className="margin picker">
             <label>Select country</label>
-            <select class="browser-default">
-                <option value="" onChange={(e) => handleCountryChange(e.target.value)}>Global</option>
+            <select className="browser-default" onChange={(e) => handleCountryChange(e.target.value)}>
+                <option value="" >Global</option>
                 {countries.map((country, i) => <option key={i} value={country}>{country}</option>)}
             </select>
       </section>
