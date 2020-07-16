@@ -18,6 +18,7 @@ const App=()=> {
       <div className="App">
         <Navbar/>
         <Switch>
+        <Route path='/' component={Global}/>
           <Route path='/Global' component={Global}/>
           <Route path='/India' component={India}/>
           <Route path='/About' component={About}/>
