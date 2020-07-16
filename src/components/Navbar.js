@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <nav className="nav-wrapper white">
         <div className="container">
-        <Link to='/India' className="brand-logo"><img src={logo} alt=""/> </Link>
+        <Link to='/' className="brand-logo"><img src={logo} alt=""/> </Link>
           <a href="index.html" className="sidenav-trigger" data-target="mobile-menu">
             <i  className="black-text material-icons">menu</i>
           </a>
